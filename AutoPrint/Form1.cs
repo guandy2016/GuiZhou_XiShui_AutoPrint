@@ -300,8 +300,9 @@ namespace AutoPrint
                 return;
             }
             int dataBaseTime = Convert.ToInt32(AppConfig.ReadValue("setting", "DataBaseTime"));
+            string tableName = AppConfig.ReadValue("setting", "tableName");
             string sql =
-                "select top 1 * FROM [IndustryPlatform].[dbo].[TT_LoadWeight] where [WeightCode]='" + NO +
+                "select top 1 * FROM [IndustryPlatform].[dbo].["+tableName+"] where [WeightCode]='" + NO +
                 "' order by WeightTime desc";
             string weightTimeBegin = DateTime.Now.AddSeconds(dataBaseTime).ToString("yyyy-MM-dd HH:mm:ss");
             string weightTimeEnd = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -540,8 +541,9 @@ namespace AutoPrint
             #region 获取过磅数据
 
             int dataBaseTime = Convert.ToInt32(AppConfig.ReadValue("setting", "DataBaseTime"));
+            string tableName = AppConfig.ReadValue("setting", "tableName");
             string sql =
-                "select top 1 * FROM [IndustryPlatform].[dbo].[TT_LoadWeight] where [WeightCode]='" +
+                "select top 1 * FROM [IndustryPlatform].[dbo].[" + tableName + "] where [WeightCode]='" +
                 textBox1.Text.ToString().Trim() + "' order by WeightTime desc";
             string weightTimeBegin = DateTime.Now.AddSeconds(dataBaseTime).ToString("yyyy-MM-dd HH:mm:ss");
             string weightTimeEnd = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -561,7 +563,7 @@ namespace AutoPrint
 
             if (dtTable != null && dtTable.Rows.Count > 0)
             {
-                #region 过磅数据
+                #region 加工过磅数据
 
                 try
                 {
