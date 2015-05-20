@@ -82,6 +82,7 @@
             this.Name = "print";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "打印";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.print_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

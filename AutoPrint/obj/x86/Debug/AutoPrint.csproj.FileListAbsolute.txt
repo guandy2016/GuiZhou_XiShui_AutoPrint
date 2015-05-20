@@ -53,6 +53,7 @@ D:\YPF\TDTK\贵州习水调运\源码\AutoPrint\AutoPrint\bin\Debug\AutoPrint.pd
 D:\YPF\TDTK\贵州习水调运\源码\AutoPrint\AutoPrint\bin\Debug\BarCode39.dll
 D:\YPF\TDTK\贵州习水调运\源码\AutoPrint\AutoPrint\bin\Debug\log4net.dll
 D:\YPF\TDTK\贵州习水调运\源码\AutoPrint\AutoPrint\bin\Debug\log4net.xml
-D:\YPF\TDTK\贵州习水调运\源码\AutoPrint\AutoPrint\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\YPF\TDTK\贵州习水调运\源码\AutoPrint\AutoPrint\obj\x86\Debug\AutoPrint.print.resources
 D:\YPF\TDTK\贵州习水调运\源码\AutoPrint\AutoPrint\obj\x86\Debug\AutoPrint.Properties.Resources.resources
+D:\YPF\TDTK\贵州习水调运\源码\AutoPrint\AutoPrint\obj\x86\Debug\AutoPrint.csprojResolveAssemblyReference.cache
+D:\YPF\TDTK\贵州习水调运\源码\AutoPrint\AutoPrint\obj\x86\Debug\AutoPrint.csproj.GenerateResource.Cache
