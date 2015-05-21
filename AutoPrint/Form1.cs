@@ -320,6 +320,10 @@ namespace AutoPrint
                 {
                     LogHelper.WriteLog(LogHelper.GetCurSourceFileName() + "~" + LogHelper.GetLineNum() + "获取过磅数据失败！", e);
                 }
+                if (dtTable != null && dtTable.Rows.Count > 0)//找到数据，跳出循环
+                {
+                    break;
+                }
             }
 
             #endregion
@@ -565,6 +569,10 @@ namespace AutoPrint
                 catch (Exception ex)
                 {
                     LogHelper.WriteLog(LogHelper.GetCurSourceFileName() + "~" + LogHelper.GetLineNum() + "获取过磅数据失败！", ex);
+                }
+                if (dtTable != null && dtTable.Rows.Count > 0)//找到数据，跳出循环
+                {
+                    break;
                 }
             }
 
