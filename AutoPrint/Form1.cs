@@ -28,7 +28,7 @@ namespace AutoPrint
         private void Form1_Load(object sender, EventArgs e)
         {
             SetSqlHelp();
-            GetDBNew();
+            //GetDBNew();取消该代码的执行，加快程序启动
             timerSpan.Interval = 1000 * Convert.ToInt32(AppConfig.ReadValue("setting", "timeSpan"));
         }
 
@@ -309,8 +309,8 @@ namespace AutoPrint
                 sql =
                 "select top 1 * FROM [IndustryPlatform].[dbo].[" + item + "] where [WeightCode]='" + NO +
                 "' order by WeightTime desc";
-                string weightTimeBegin = DateTime.Now.AddSeconds(dataBaseTime).ToString("yyyy-MM-dd HH:mm:ss");
-                string weightTimeEnd = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                //                string weightTimeBegin = DateTime.Now.AddSeconds(dataBaseTime).ToString("yyyy-MM-dd HH:mm:ss");
+                //                string weightTimeEnd = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                 try
                 {
@@ -548,6 +548,12 @@ namespace AutoPrint
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            if (!isnumeric(textBox1.Text))
+            {
+                MessageBox.Show("请输入正确的过磅编号","提醒");
+                return;
+            }
+
             #region 获取过磅数据
 
             int dataBaseTime = Convert.ToInt32(AppConfig.ReadValue("setting", "DataBaseTime"));
@@ -560,8 +566,8 @@ namespace AutoPrint
                 sql =
                 "select top 1 * FROM [IndustryPlatform].[dbo].[" + item + "] where [WeightCode]='" +
                 textBox1.Text.ToString().Trim() + "' order by WeightTime desc";
-                string weightTimeBegin = DateTime.Now.AddSeconds(dataBaseTime).ToString("yyyy-MM-dd HH:mm:ss");
-                string weightTimeEnd = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                //                string weightTimeBegin = DateTime.Now.AddSeconds(dataBaseTime).ToString("yyyy-MM-dd HH:mm:ss");
+                //                string weightTimeEnd = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 try
                 {
                     dtTable = SQLHelper.ExcuteDataTable(sql);
