@@ -80,20 +80,24 @@ namespace AutoPrint
             //资源费
             g.DrawString(pdc.TaxLocalPayMoney.ToString("0.00"), font2, Brushes.Black, (PointF)base.GetPoint((((base.m_Rect_x + base.m_First_Column_W) + base.m_Second_Column_W) + base.m_Third_Column_W) + base.m_decX, (base.m_Rect_y + num) + base.m_decY));
             num = base.m_LineHeight * 6M;
-           //育林基金
-            g.DrawString(pdc.TaxYuLinPayMoney.ToString("0.00"), font2, Brushes.Black, (PointF)base.GetPoint((base.m_Rect_x + base.m_decX) + base.m_First_Column_W, (base.m_Rect_y + num) + base.m_decY));
+           ////育林基金
+           // g.DrawString(pdc.TaxYuLinPayMoney.ToString("0.00"), font2, Brushes.Black, (PointF)base.GetPoint((base.m_Rect_x + base.m_decX) + base.m_First_Column_W, (base.m_Rect_y + num) + base.m_decY));
+            //销售价
+            g.DrawString(pdc.CoalSaleUnitPrice.ToString("0.00"), font2, Brushes.Black, (PointF)base.GetPoint((base.m_Rect_x + base.m_decX) + base.m_First_Column_W, (base.m_Rect_y + num) + base.m_decY));
             //水土保持
             g.DrawString(pdc.TaxSoilWaterPayMoney.ToString("0.00"), font2, Brushes.Black, (PointF)base.GetPoint((((base.m_Rect_x + base.m_First_Column_W) + base.m_Second_Column_W) + base.m_Third_Column_W) + base.m_decX, (base.m_Rect_y + num) + base.m_decY));
             num = base.m_LineHeight * 7M;
-            //销售价
-            g.DrawString(pdc.CoalSaleUnitPrice.ToString("0.00"), font2, Brushes.Black, (PointF)base.GetPoint((base.m_Rect_x + base.m_decX) + base.m_First_Column_W, (base.m_Rect_y + num) + base.m_decY));
+            ////销售价
+            //g.DrawString(pdc.CoalSaleUnitPrice.ToString("0.00"), font2, Brushes.Black, (PointF)base.GetPoint((base.m_Rect_x + base.m_decX) + base.m_First_Column_W, (base.m_Rect_y + num) + base.m_decY));
+            //销售去向
+            g.DrawString(pdc.PayCity, font2, Brushes.Black, (PointF)base.GetPoint((base.m_Rect_x + base.m_decX) + base.m_First_Column_W, (base.m_Rect_y + num) + base.m_decY));
             //货物运输费
             g.DrawString(pdc.TaxYunShuPayMoney.ToString("0.00"), font2, Brushes.Black, (PointF)base.GetPoint((((base.m_Rect_x + base.m_First_Column_W) + base.m_Second_Column_W) + base.m_Third_Column_W) + base.m_decX, (base.m_Rect_y + num) + base.m_decY));
             num = base.m_LineHeight * 8M;
-            //销售去向
-            g.DrawString(pdc.PayCity, font2, Brushes.Black, (PointF)base.GetPoint((base.m_Rect_x + base.m_decX) + base.m_First_Column_W, (base.m_Rect_y + num) + base.m_decY));
+            ////销售去向
+            //g.DrawString(pdc.PayCity, font2, Brushes.Black, (PointF)base.GetPoint((base.m_Rect_x + base.m_decX) + base.m_First_Column_W, (base.m_Rect_y + num) + base.m_decY));
             //销售收入
-            g.DrawString((pdc.CoalSaleUnitPrice * Convert.ToDecimal(pdc.NetWeight.ToString())).ToString("0.00"), font2, Brushes.Black, (PointF)base.GetPoint((((base.m_Rect_x + base.m_First_Column_W) + base.m_Second_Column_W) + base.m_Third_Column_W) + base.m_decX, (base.m_Rect_y + num) + base.m_decY));
+            g.DrawString((pdc.CoalSaleUnitPrice * Convert.ToDecimal(pdc.NetWeight.ToString())).ToString("0.00"), font2, Brushes.Black, (PointF)base.GetPoint((base.m_Rect_x + base.m_decX) + base.m_First_Column_W, (base.m_Rect_y + num) + base.m_decY));
             num = base.m_LineHeight * 9M;
             //金额
             string s = ConvertData.ConvertSum(pdc.PayMoney.ToString("0.00")) + " (￥" + pdc.PayMoney.ToString("0.00") + ")";
